@@ -37,8 +37,10 @@ const HeroSection = () => {
             <Button variant="hero" size="xl">
               {t('hero.cta')}
             </Button>
-            <Button variant="hero-outline" size="xl">
-              {t('cta.contact')}
+            <Button asChild variant="hero-outline" size="xl">
+              <a href="mailto:info@citi.top">
+                {t('cta.contact')}
+              </a>
             </Button>
           </div>
         </div>
@@ -63,8 +65,8 @@ const HeroSection = () => {
                   
                   {/* App header */}
                   <div className="flex items-center gap-2 mb-6">
-                    <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                      <span className="text-primary-foreground font-bold text-sm">S</span>
+                    <div className="w-8 h-8 rounded-lg bg-black flex items-center justify-center overflow-hidden">
+                      <img src="/favicon.svg" alt="citi.app logo" className="w-full h-full object-contain p-1" />
                     </div>
                     <span className="font-semibold text-foreground">citi.app</span>
                   </div>
@@ -75,25 +77,25 @@ const HeroSection = () => {
                       <div className="w-8 h-8 mx-auto mb-2 rounded-lg bg-feature-transport/20 flex items-center justify-center">
                         <div className="w-4 h-4 rounded-full bg-feature-transport" />
                       </div>
-                      <span className="text-xs font-medium text-foreground">Transport</span>
+                      <span className="text-xs font-medium text-foreground">{t('mockup.transport')}</span>
                     </div>
                     <div className="bg-feature-utilities/10 rounded-xl p-3 text-center">
                       <div className="w-8 h-8 mx-auto mb-2 rounded-lg bg-feature-utilities/20 flex items-center justify-center">
                         <div className="w-4 h-4 rounded-full bg-feature-utilities" />
                       </div>
-                      <span className="text-xs font-medium text-foreground">Utilities</span>
+                      <span className="text-xs font-medium text-foreground">{t('mockup.utilities')}</span>
                     </div>
                     <div className="bg-feature-services/10 rounded-xl p-3 text-center">
                       <div className="w-8 h-8 mx-auto mb-2 rounded-lg bg-feature-services/20 flex items-center justify-center">
                         <div className="w-4 h-4 rounded-full bg-feature-services" />
                       </div>
-                      <span className="text-xs font-medium text-foreground">Services</span>
+                      <span className="text-xs font-medium text-foreground">{t('mockup.services')}</span>
                     </div>
                     <div className="bg-feature-events/10 rounded-xl p-3 text-center">
                       <div className="w-8 h-8 mx-auto mb-2 rounded-lg bg-feature-events/20 flex items-center justify-center">
                         <div className="w-4 h-4 rounded-full bg-feature-events" />
                       </div>
-                      <span className="text-xs font-medium text-foreground">Events</span>
+                      <span className="text-xs font-medium text-foreground">{t('mockup.events')}</span>
                     </div>
                   </div>
 
@@ -101,7 +103,7 @@ const HeroSection = () => {
                   <div className="bg-card rounded-xl p-3 shadow-sm">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-primary animate-pulse-soft" />
-                      <span className="text-xs text-muted-foreground">Bus 24 arrives in 3 min</span>
+                      <span className="text-xs text-muted-foreground">{t('mockup.notification')}</span>
                     </div>
                   </div>
                 </div>

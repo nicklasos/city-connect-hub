@@ -82,6 +82,13 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.button': 'Приєднатися до списку очікування',
     'cta.contact': 'Зв\'язатися з командою',
     
+    // Phone mockup
+    'mockup.transport': 'Транспорт',
+    'mockup.utilities': 'Комунальні послуги',
+    'mockup.services': 'Міські сервіси',
+    'mockup.events': 'Події та новини',
+    'mockup.notification': 'Автобус 24 прибуде через 3 хв',
+    
     // Footer
     'footer.description': 'Усі міські сервіси в одному застосунку.',
     'footer.privacy': 'Політика конфіденційності',
@@ -166,6 +173,13 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.subtitle': 'Join the waitlist and be among the first to get access to the app.',
     'cta.button': 'Join the waitlist',
     'cta.contact': 'Contact the team',
+    
+    // Phone mockup
+    'mockup.transport': 'Transport',
+    'mockup.utilities': 'Utilities',
+    'mockup.services': 'Services',
+    'mockup.events': 'Events',
+    'mockup.notification': 'Bus 24 arrives in 3 min',
     
     // Footer
     'footer.description': 'All city services in one app.',

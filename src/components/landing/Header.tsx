@@ -19,8 +19,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg md:text-xl">S</span>
+            <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-black flex items-center justify-center overflow-hidden">
+              <img src="/favicon.svg" alt="citi.app logo" className="w-full h-full object-contain p-1" />
             </div>
             <span className="font-bold text-lg md:text-xl text-foreground">citi.app</span>
           </a>

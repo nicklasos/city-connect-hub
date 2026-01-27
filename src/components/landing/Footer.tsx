@@ -11,8 +11,8 @@ const Footer = () => {
           {/* Logo & description */}
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-              <div className="w-8 h-8 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">S</span>
+              <div className="w-8 h-8 rounded-xl bg-black flex items-center justify-center overflow-hidden">
+                <img src="/favicon.svg" alt="citi.app logo" className="w-full h-full object-contain p-1" />
               </div>
               <span className="font-bold text-xl text-background">citi.app</span>
             </div>

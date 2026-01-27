@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Mail, ArrowRight } from 'lucide-react';
 
 const CTASection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isUkrainian = language === 'uk';
 
   return (
     <section className="py-16 md:py-24 bg-background">
@@ -23,22 +24,25 @@ const CTASection = () => {
                 {t('cta.subtitle')}
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mx-4 sm:mx-6">
                 <Button
                   variant="secondary"
                   size="xl"
-                  className="w-full sm:w-auto group"
+                  className={`w-full sm:w-auto group ${isUkrainian ? 'text-xs sm:text-sm px-4 sm:px-10' : ''}`}
                 >
                   {t('cta.button')}
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </Button>
                 <Button
+                  asChild
                   variant="ghost"
                   size="xl"
-                  className="w-full sm:w-auto text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                  className={`w-full sm:w-auto text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground ${isUkrainian ? 'text-sm sm:text-base px-4 sm:px-10' : ''}`}
                 >
-                  <Mail className="w-5 h-5 mr-2" />
-                  {t('cta.contact')}
+                  <a href="mailto:info@citi.top">
+                    <Mail className="w-5 h-5 mr-2" />
+                    {t('cta.contact')}
+                  </a>
                 </Button>
               </div>
             </div>
