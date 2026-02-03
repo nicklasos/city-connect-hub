@@ -9,6 +9,7 @@ import PrivacyPolicyUA from "./pages/PrivacyPolicyUA";
 import PrivacyPolicyEN from "./pages/PrivacyPolicyEN";
 import TermsOfUseUA from "./pages/TermsOfUseUA";
 import TermsOfUseEN from "./pages/TermsOfUseEN";
+import AccountDeletion from "./pages/AccountDeletion";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/privacy-en" element={<PrivacyPolicyEN />} />
             <Route path="/terms-ua" element={<TermsOfUseUA />} />
             <Route path="/terms-en" element={<TermsOfUseEN />} />
+            <Route path="/account-deletion" element={<AccountDeletion />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
