@@ -42,14 +42,14 @@ const AppGallery = () => {
 
   return (
     <div className="mt-10 md:mt-12 mx-auto animate-fade-in-up animation-delay-400">
-      <Carousel setApi={setApi} opts={{ loop: true }} className="w-full max-w-[260px] sm:max-w-[300px] md:max-w-[340px] mx-auto">
+      <Carousel setApi={setApi} opts={{ loop: true }} className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] mx-auto">
         <CarouselContent className="-ml-0">
           {SCREENSHOT_PATHS.map((src, index) => (
             <CarouselItem key={src} className="pl-0 basis-full flex justify-center">
               <img
                 src={src}
                 alt={`citi.app screenshot ${index + 1}`}
-                className="w-auto max-w-full max-h-[min(52vh,360px)] sm:max-h-[min(55vh,400px)] md:max-h-[460px] object-contain"
+                className="w-auto max-w-full max-h-[min(58vh,400px)] sm:max-h-[min(60vh,440px)] md:max-h-[520px] object-contain"
                 loading={index === 0 ? 'eager' : 'lazy'}
               />
             </CarouselItem>
