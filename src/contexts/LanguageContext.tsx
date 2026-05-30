@@ -19,8 +19,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.title': 'Усі міські сервіси в одному застосунку',
     'hero.subtitle': 'Транспорт, комунальні послуги, міські сервіси та події — все під рукою. Зручно, швидко, надійно.',
-    'hero.cta': 'Приєднатися до списку очікування',
-    'hero.comingSoon': 'Скоро на iOS та Android',
+    'hero.available': 'Вже доступно на iOS та Android',
+    'hero.appStore': 'Завантажити в App Store',
+    'hero.googlePlay': 'Завантажити в Google Play',
     
     // Benefits
     'benefits.title': 'Чому обирають citi.app',
@@ -78,16 +79,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // CTA
     'cta.title': 'Готові до розумного міста?',
-    'cta.subtitle': 'Приєднуйтесь до списку очікування та будьте першими, хто отримає доступ до застосунку.',
-    'cta.button': 'Приєднатися до списку очікування',
+    'cta.subtitle': 'Завантажте застосунок СІТІ та користуйтеся міськими сервісами вже сьогодні.',
     'cta.contact': 'Зв\'язатися з командою',
-    
-    // Phone mockup
-    'mockup.transport': 'Транспорт',
-    'mockup.utilities': 'Комунальні послуги',
-    'mockup.services': 'Міські сервіси',
-    'mockup.events': 'Події та новини',
-    'mockup.notification': 'Автобус 24 прибуде через 3 хв',
     
     // Footer
     'footer.description': 'Усі міські сервіси в одному застосунку.',
@@ -111,8 +104,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.title': 'All city services in one app',
     'hero.subtitle': 'Transport, utilities, city services, and events — all at your fingertips. Convenient, fast, reliable.',
-    'hero.cta': 'Join the waitlist',
-    'hero.comingSoon': 'Coming soon on iOS & Android',
+    'hero.available': 'Available now on iOS & Android',
+    'hero.appStore': 'Download on the App Store',
+    'hero.googlePlay': 'Get it on Google Play',
     
     // Benefits
     'benefits.title': 'Why choose citi.app',
@@ -170,16 +164,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // CTA
     'cta.title': 'Ready for a smart city?',
-    'cta.subtitle': 'Join the waitlist and be among the first to get access to the app.',
-    'cta.button': 'Join the waitlist',
+    'cta.subtitle': 'Download the CITI app and start using city services today.',
     'cta.contact': 'Contact the team',
-    
-    // Phone mockup
-    'mockup.transport': 'Transport',
-    'mockup.utilities': 'Utilities',
-    'mockup.services': 'Services',
-    'mockup.events': 'Events',
-    'mockup.notification': 'Bus 24 arrives in 3 min',
     
     // Footer
     'footer.description': 'All city services in one app.',

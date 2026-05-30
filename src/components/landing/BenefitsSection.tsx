@@ -28,7 +28,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="pt-10 md:pt-12 pb-16 md:pb-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section header */}
         <div className="text-center mb-12 md:mb-16">

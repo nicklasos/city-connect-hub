@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
@@ -63,10 +62,6 @@ const Header = () => {
                 EN
               </button>
             </div>
-
-            <Button variant="hero" size="default">
-              {t('hero.cta')}
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -122,10 +117,6 @@ const Header = () => {
                   </button>
                 </div>
               </div>
-
-              <Button variant="hero" size="lg" className="mt-2 w-full">
-                {t('hero.cta')}
-              </Button>
             </nav>
           </div>
         )}

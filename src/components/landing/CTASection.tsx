@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Mail, ArrowRight } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import StoreButtons from '@/components/landing/StoreButtons';
 
 const CTASection = () => {
   const { t, language } = useLanguage();
@@ -10,9 +11,7 @@ const CTASection = () => {
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Main CTA card */}
           <div className="relative p-8 md:p-12 rounded-3xl bg-primary overflow-hidden">
-            {/* Background decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-foreground/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
@@ -24,15 +23,8 @@ const CTASection = () => {
                 {t('cta.subtitle')}
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mx-4 sm:mx-6">
-                <Button
-                  variant="secondary"
-                  size="xl"
-                  className={`w-full sm:w-auto group ${isUkrainian ? 'text-xs sm:text-sm px-4 sm:px-10' : ''}`}
-                >
-                  {t('cta.button')}
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Button>
+              <div className="mx-4 sm:mx-6">
+                <StoreButtons variant="cta" className="mb-4" />
                 <Button
                   asChild
                   variant="ghost"
