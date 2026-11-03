@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
+# CITI — твоє місто поруч
 
-## Project info
+Static Ukrainian and English website for residents. Brand assets and app screenshots are supplied by the product owner.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Run
 
-## How can I edit this code?
+`node build.mjs` generates the homepage and 14 service pages in each language in `dist/`.
 
-There are several ways of editing your application.
+`python3 -m http.server 4173 --bind 127.0.0.1 --directory dist` serves a local preview. Ukrainian is at `/` and English is at `/en/`.
 
-**Use Lovable**
+## Content
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Edit Ukrainian service descriptions and the 34-community list in `build.mjs`, and English service translations and place names in `content-en.mjs`. Then rebuild the site. Keep launch statuses for parking, utilities, and CNAP accurate. The supplied community list includes work in progress; it is not a list of fully launched services. Regional labels are included only where supplied explicitly.
 
-Changes made via Lovable will be committed automatically to this repo.
+Styles and client-side interactions are in `dist/styles.css` and `dist/app.js`. Static assets are in `dist/assets/`. No build dependencies, external trackers, or runtime data services are used.
 
-**Use your preferred IDE**
+Set `SITE_ORIGIN=https://your-domain.example node build.mjs` when building for a custom domain. This sets the canonical URLs, language alternates, share metadata and sitemap origin. Search indexing requires public access. Both language versions link to the original privacy and terms pages supplied by CITI.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Verification from earlier revisions
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- 14 service detail routes and 34 unique community names.
+- Internal links, anchors, image paths, title/description metadata, one H1 per page, and JSON-LD validated.
+- All 14 services are visible together in one collection, each with a screenshot, description, three benefits, detail link, and accurate development status.
+- Browser checks: all 14 collection images decoded successfully; community search, onboarding carousel, mobile menu, and service-detail pages.
+- All 21 PNG assets passed file integrity and HTTP content checks.
+- Styles and scripts use content hashes in URLs to avoid stale cached assets after changes.
+- Desktop 1440px and mobile 390px layouts checked; no horizontal overflow at these widths.
 
-Follow these steps:
+## Local preview troubleshooting
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+If only some images remain visible after the preview server stops, restart the server with the command above and reload the page. Already loaded images may remain in the browser cache while later screenshots fail to load; the original PNG files are intact.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Collected marketing revisions
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Four benefit-focused hero badges; the generic AI prompt has been replaced.
+- Removed the community-selection prompt beneath the hero buttons.
+- App Store and Google Play QR codes are bundled SVG assets, with direct store links. Both were independently decoded from the actual desktop browser screenshot and match the store buttons.
+- All 14 services are presented in one visible collection, with development statuses.
+- Availability notes explain that the service set differs by city and some features are not yet available everywhere.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Second design revision
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Replaced the hero and introductory slogans with resident-focused copy.
+- Header, footer, getting-started illustration, and favicon use the supplied citi-logo.png unchanged.
+- Community directory is now an interactive Ukraine map with all 34 cooperation communities, keyboard navigation, previous/next controls, and a searchable complete list.
+- Map outline comes from the user-owned reference citi.org.ua; community-locations.json supplies approximate schematic settlement locations, not community boundaries. Cooperation does not imply every service is already launched.
+- Replaced the mobile onboarding carousel with three original web step cards and direct section links.
+- Browser verification: all 34 communities visited; isolated map pin, keyboard navigation, search and empty state passed.
